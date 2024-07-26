@@ -1,0 +1,49 @@
+@charset "UTF-8";
+/* common */
+/* ========================== */
+html {
+  font-size: 62.5%;
+}
+body {
+  line-height: 1;
+  font-family: "Montserrat","Noto Serif JP", sans-serif, serif ;
+}
+
+/* parts */
+/* ========================== */
+@media screen and (max-width:768px) {
+}
+
+/* heading */
+/* ========================== */
+@media screen and (max-width:768px) {
+}
+
+/* header */
+/* ========================== */
+
+@media screen and (max-width:767px) {
+}
+
+/* main-area */
+/* ========================== */
+@media screen and (max-width:768px) {
+
+}
+
+/*  */
+/* ========================== */
+
+@media screen and (max-width: 768px) {
+}
+
+/*  */
+/* ========================== */
+
+@media screen and (max-width: 768px) {
+}
+
+/* footer */
+/* ========================== */
+@media screen and (max-width: 768px) {
+}
