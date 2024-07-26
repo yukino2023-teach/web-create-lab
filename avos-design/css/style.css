@@ -1,0 +1,188 @@
+@charset "UTF-8";
+:root {
+  --font-black: #5f5f5f;
+}
+:root {
+  --font-green: #c0e85d;
+}
+:root {
+  --font-brown: #705d00;
+}
+:root {
+  --font-white: #ffffff;
+}
+
+:root {
+  --sec-bottom: 120px;
+}
+:root {
+  --font-gothic: "游ゴシック体", YuGothic, "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック", "Yu Gothic", sans-serif;
+}
+:root {
+  --font-inter: "Inter", sans-serif;
+}
+
+
+/* main-visual */
+/* ========================== */
+.main-visual {
+  position: relative;
+  height: 100vh;
+  margin-bottom: var(--sec-bottom);
+}
+.main-visual__item img {
+  height: 100vh;
+
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.main-visual__text {
+  position: absolute;
+  bottom: 10%;
+  width: 90%;
+  max-width: 788px;
+  height: 313px;
+  padding: 32px 0 32px 13%;
+  background-color: var(--font-green);
+  font-weight: bold;
+  line-height: 1;
+  font-family: var(--font-inter);
+}
+@media screen and (max-width:768px) {
+}
+
+/* main-area */
+/* ========================== */
+@media screen and (max-width:768px) {
+}
+
+
+/* top-news */
+/* ========================== */
+.news__contents {
+  display: flex;
+  margin-bottom: 64px;
+}
+.news__list {
+  padding-left: 64px;
+}
+.news__item {
+  display: flex;
+  align-items: center;
+  padding-bottom: 16px;
+  font-size: 1.8rem;
+}
+.news__item-time {
+  color: var(--font-brown);
+  letter-spacing: .26em;
+}
+.news__item-tag {
+  position: relative;
+  width: 106px;
+  margin-left: 16px;
+  padding: 8px 0 8px 8px;
+  background-color: #c0e85d;
+  color: var(--font-white);
+}
+.news__item-tag::before {
+  position: absolute;
+  top: 50%;
+  right: -20px;
+  transform: translateY(-50%);
+  border-top: 16px solid transparent;
+  border-right: 0;
+  border-bottom: 16px solid transparent;
+  border-left: 20px solid #c0e85d;
+  border-style: solid;
+  content: "";
+}
+.news__item-link {
+  margin-left: 52px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #e3d79c;
+  color: var(--font-brown);
+  font-family: var(--font-gothic);
+}
+@media screen and (max-width: 768px) {
+}
+
+/* top-news */
+/* ========================== */
+
+
+@media screen and (max-width: 768px) {
+}
+
+/* top-news */
+/* ========================== */
+
+
+@media screen and (max-width: 768px) {
+}
+
+/* top-news */
+/* ========================== */
+
+
+@media screen and (max-width: 768px) {
+}
+
+/* top-recruit */
+/* ========================== */
+.recruit{
+  font-size: 1.8rem;
+}
+.recruit__inner{
+  display: flex;
+  background-color: #E3D79C;
+  padding: 64px 24px;
+  position: relative;
+}
+.recruit__text-area{
+  width: 58.55%;
+  padding: 54px 13.3% 54px 24px;
+  background-color: #ffffff;
+}
+.recruit__img{
+  position: absolute;
+  width: 49.54%;
+  right: 24px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.recruit__text-area .heading__h2{
+  margin-bottom: 44px;
+}
+.recruit__sentence{
+  margin-bottom: 62px;
+}
+.recruit__text{
+  font-family: var(--font-gothic);
+}
+.recruit__text:first-child{
+  padding-bottom: 40px;
+}
+@media screen and (max-width: 768px) {
+}
+
+/* top-contact */
+/* ========================== */
+.contact{
+  padding: 48px 0;
+  font-size: 1.8rem;
+  background-color: #FFF9DD;
+}
+.contact__inner{
+  margin-bottom: 0;
+}
+.contact .heading__h2{
+  margin-bottom: 48px;
+}
+.contact__text{
+  line-height: 1.67;
+  margin-bottom: 48px;
+}
+
+@media screen and (max-width: 768px) {
+}
+
