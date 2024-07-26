@@ -1,0 +1,309 @@
+@charset "UTF-8";
+/* common */
+/* ========================== */
+html {
+  font-size: 62.5%;
+}
+body {
+  line-height: 1;
+  font-family: "游明朝体", "Yu Mincho", YuMincho, "ヒラギノ明朝 Pro", "Hiragino Mincho Pro", "MS P明朝", "MS PMincho", serif;
+}
+.wrapper {
+  width: 95%;
+  max-width: 1100px;
+  margin: 0 auto 120px;
+}
+@media screen and (max-width:1150px) {
+  .wrapper {
+    width: 100%;
+    padding: 0 16px;
+  }
+}
+
+/* parts */
+/* ========================== */
+a {
+  transition: .3s;
+}
+a:hover {
+  opacity: .6;
+}
+.btn {
+  text-align: center;
+}
+.btn button {
+  width: 260px;
+  height: 50px;
+  background-color: #d8cdc2;
+  font-size: 2.2rem;
+  line-height: 50px;
+  font-family: "游明朝体", "Yu Mincho", YuMincho, "ヒラギノ明朝 Pro", "Hiragino Mincho Pro", "MS P明朝", "MS PMincho", serif;
+  text-align: center;
+  cursor: pointer;
+  transition: .3s;
+}
+.btn button:hover {
+  opacity: .7;
+}
+@media screen and (max-width:768px) {
+  .btn button{
+    font-size: 1.6rem;
+  }
+}
+
+/* heading */
+/* ========================== */
+.heading__h2 {
+  position: relative;
+  margin-bottom: 48px;
+  font-weight: bold;
+  font-size: 3.6rem;
+}
+.heading__h2::after {
+  position: absolute;
+  top: 50%;
+  right: -2.5%;
+  transform: translateY(-50%);
+  width: 69%;
+  height: 3px;
+  background-color: #cbbdad;
+  content: "";
+}
+@media screen and (max-width:1150px) {
+  .heading__h2::after {
+    right: -2%;
+    width: 63%;
+  }
+}
+@media screen and (max-width:768px) {
+  .heading__h2 {
+    font-size: 2.2rem;
+  }
+  .heading__h2::after {
+    width: 50%;
+    right: -16px;
+  }
+}
+@media screen and (max-width:370px) {
+  .heading__h2::after {
+    width: 45%;
+  }
+}
+
+/* header */
+/* ========================== */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0;
+  padding: 24px 0;
+}
+.header .header-nav .header-nav__list {
+  display: flex;
+  align-items: center;
+
+  gap: 32px;
+}
+.header .header-nav .header-nav__item {
+  font-size: 1.8rem;
+}
+.logo {
+  width: 273px;
+}
+@media screen and (max-width:767px) {
+  .header {
+    padding: 0 16px;
+    display: block;
+  }
+  .header .header-nav .header-nav__list {
+    justify-content: space-between;
+    width: 100%;
+    padding: 11px 0;
+    gap: 0;
+  }
+  .header .header-nav .header-nav__item {
+    font-size: 1.4rem;
+  }
+  .logo {
+    width: 165px;
+    padding: 16px 0 22px;
+  }
+}
+
+/* main-area */
+/* ========================== */
+.main-area {
+  max-width: 1440px;
+  margin: 0 auto 120px;
+}
+.main-area__text {
+  font-size: 3.2rem;
+  line-height: 1.8;
+  letter-spacing: 3.8rem;
+}
+.main-area__text .main-area__text--narrow {
+  letter-spacing: -2rem;
+}
+@media screen and (max-width:1150px) {
+  .main-area__text {
+    padding: 0;
+    font-size: 2.6vw;
+    letter-spacing: 3.55vw;
+  }
+}
+@media screen and (max-width:768px) {
+  .mainvisual {
+    margin-bottom: 35px;
+  }
+  .main-area__text {
+    align-items: center;
+    max-width: 172px;
+    margin: 0 auto;
+    font-size: 2.4rem;
+    line-height: 2.6;
+    white-space: nowrap;
+
+    writing-mode: vertical-rl;
+  }
+}
+
+/* gallery */
+/* ========================== */
+.gallery .gallery__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.gallery .gallery__list .gallery__item {
+  width: 23.0909%;
+}
+.gallery .gallery__list .gallery__item:nth-child(2n) {
+  margin-top: 28px;
+}
+@media screen and (max-width:768px) {
+  .gallery .gallery__list .gallery__item {
+    width: 48.68%;
+  }
+}
+
+/* qa */
+/* ========================== */
+.qa .qa__list {
+  margin-left: 13.6363%;
+}
+.qa .qa__list .qa__item {
+  margin-bottom: 32px;
+  padding-left: 37px;
+  font-size: 1.8rem;
+  line-height: 1.2;
+}
+.qa .qa__list .question__text {
+  position: relative;
+  padding-bottom: 16px;
+}
+.qa .qa__list .answer__text {
+  position: relative;
+}
+.qa .qa__list .question__text::before, .qa .qa__list .answer__text::before {
+  position: absolute;
+  left: -37px;
+}
+.qa .qa__list .question__text::before {
+  color: #262626;
+  content: "Q.";
+}
+.qa .qa__list .answer__text::before {
+  color: #add0bd;
+  content: "A.";
+}
+@media screen and (max-width:768px) {
+  .qa .qa__list {
+    margin-left: 0;
+  }
+  .qa .qa__list .qa__item {
+    padding-left: 25px;
+    font-size: 1.4rem;
+  }
+  .qa .qa__list .question__text::before, .qa .qa__list .answer__text::before {
+    left: -25px;
+  }
+}
+
+/* contact */
+/* ========================== */
+.form__item {
+  display: flex;
+  align-items: flex-start;
+  max-width: 920px;
+  margin: 0 auto;
+}
+.form__item:not(:last-child) {
+  margin-bottom: 30px;
+}
+.form__title {
+  display: block;
+  width: 267px;
+  margin-bottom: 5px;
+  font-weight: bold;
+  font-size: 2rem;
+}
+.form__input {
+  width: calc(100% - 267px);
+  padding: 20px 16px;
+  border: solid 1px #cbbdad;
+  border-radius: 5px;
+  background-color: #ffffff;
+}
+.form__textarea {
+  width: calc(100% - 267px);
+  min-height: 200px;
+  padding: 20px 16px;
+  border: solid 1px #cbbdad;
+  border-radius: 5px;
+  background-color: #ffffff;
+  resize: both;
+}
+.form__input::placeholder, .form__textarea::placeholder {
+  color: #cbbdad;
+  font-size: 1.6rem;
+  font-family: "游明朝体", "Yu Mincho", YuMincho, "ヒラギノ明朝 Pro", "Hiragino Mincho Pro", "MS P明朝", "MS PMincho", serif;
+}
+.form__btn {
+  margin-top: 50px;
+  text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+  .contact{
+    margin-bottom: 71px;
+  }
+  .form__title{
+    font-size: 1.4rem;
+  }
+  .form__item {
+    display: block;
+  }
+  .form__input, .form__textarea {
+    width: 100%;
+    box-sizing: border-box;
+  }
+  .form__input::placeholder, .form__textarea::placeholder {
+    font-size: 1.4rem;
+  }
+}
+
+/* footer */
+/* ========================== */
+.footer {
+  margin-bottom: 20px;
+}
+.copyright {
+  font-size: 1.8rem;
+  text-align: center;
+}
+@media screen and (max-width: 768px) {
+  .copyright{
+    font-size: 1.2rem;
+  }
+}
