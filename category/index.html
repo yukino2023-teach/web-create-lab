@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>カテゴリー分け</title>
+    <!-- ▼CSS読み込み▼ -->
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <!-- ▼script読み込み▼ -->
+    <script
+      type="text/javascript"
+      src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+    ></script>
+    <script src="./js/script.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="categories">
+        <button class="category-btn" data-category="all">全て</button>
+        <button class="category-btn" data-category="web-design">
+          Webデザイン
+        </button>
+        <button class="category-btn" data-category="graphic">
+          グラフィック
+        </button>
+        <button class="category-btn" data-category="coding">
+          コーディング
+        </button>
+      </div>
+      <div class="items">
+        <div class="item" data-category="web-design">
+          <p>Webデザインのアイテム1</p>
+          <img src="https://picsum.photos/200/300.jpg" alt="" />
+        </div>
+        <div class="item" data-category="graphic">
+          <p>グラフィックのアイテム1</p>
+          <img src="https://picsum.photos/id/237/200/300" alt="" />
+        </div>
+        <div class="item" data-category="coding">
+          <p>コーディングのアイテム1</p>
+          <img src="https://picsum.photos/seed/picsum/200/300" alt="" />
+        </div>
+        <div class="item" data-category="web-design">
+          <p>Webデザインのアイテム2</p>
+          <img src="https://picsum.photos/200/300?grayscale" alt="" />
+        </div>
+        <div class="item" data-category="graphic">
+          <p>グラフィックのアイテム2</p>
+          <img src="https://picsum.photos/200/300/?blur" alt="" />
+        </div>
+        <div class="item" data-category="coding">
+          <p>コーディングのアイテム2</p>
+          <img
+            src="https://picsum.photos/id/870/200/300?grayscale&blur=2"
+            alt=""
+          />
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
