@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>見積シミュレーション</title>
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body oncontextmenu="return false;">
+    <div class="container">
+      <h1>見積シミュレーション</h1>
+
+      <h2>静的コーディング項目</h2>
+      <table id="estimateTable1">
+        <thead>
+          <tr>
+            <th class="contents">内容</th>
+            <th class="number">個数/ページ数</th>
+            <th class="money">料金</th>
+            <th class="price">金額</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="contents">LPコーディング</td>
+            <td class="number">
+              <input
+                type="number"
+                id="lpCoding"
+                value="0"
+                oninput="updateTotal('lpCoding', 30000)"
+              />
+            </td>
+            <td class="money">¥30,000</td>
+            <td id="lpCodingTotal" class="price">¥0</td>
+          </tr>
+          <tr>
+            <td class="contents">トップページ</td>
+            <td class="number">
+              <input
+                type="number"
+                id="topPage"
+                value="0"
+                oninput="updateTotal('topPage', 28000)"
+              />
+            </td>
+            <td class="money">¥28,000</td>
+            <td id="topPageTotal" class="price">¥0</td>
+          </tr>
+          <tr>
+            <td class="contents">下層ページ</td>
+            <td class="number">
+              <input
+                type="number"
+                id="subPage"
+                value="0"
+                oninput="updateTotal('subPage', 8000)"
+              />
+            </td>
+            <td class="money">¥8,000</td>
+            <td id="subPageTotal" class="price">¥0</td>
+          </tr>
+          <tr>
+            <td class="contents">各種アニメーション</td>
+            <td class="number">
+              <input
+                type="number"
+                id="animation"
+                value="0"
+                oninput="updateTotal('animation', 5000)"
+              />
+            </td>
+            <td class="money">¥5,000</td>
+            <td id="animationTotal" class="price">¥0</td>
+          </tr>
+          <tr>
+            <td class="contents">ブログ一覧</td>
+            <td class="number">
+              <input
+                type="number"
+                id="blogList"
+                value="0"
+                oninput="updateTotal('blogList', 6000)"
+              />
+            </td>
+            <td class="money">¥6,000</td>
+            <td id="blogListTotal" class="price">¥0</td>
+          </tr>
+          <tr>
+            <td class="contents">プライバシーポリシー</td>
+            <td class="number">
+              <input
+                type="number"
+                id="privacyPolicy"
+                value="0"
+                oninput="updateTotal('privacyPolicy', 4000)"
+              />
+            </td>
+            <td class="money">¥4,000</td>
+            <td id="privacyPolicyTotal" class="price">¥0</td>
+          </tr>
+          <tr>
+            <td class="contents">複製ページ（少ボリュームのページ）</td>
+            <td class="number">
+              <input
+                type="number"
+                id="replicatedPage"
+                value="0"
+                oninput="updateTotal('replicatedPage', 3000)"
+              />
+            </td>
+            <td class="money">¥3,000</td>
+            <td id="replicatedPageTotal" class="price">¥0</td>
+          </tr>
+          <tr>
+            <td class="contents">お問い合わせフォーム（Googleformなど）</td>
+            <td class="number">
+              <input
+                type="number"
+                id="contactForm"
+                value="0"
+                oninput="updateTotal('contactForm', 12000)"
+              />
+            </td>
+            <td class="money">¥12,000</td>
+            <td id="contactFormTotal" class="price">¥0</td>
+          </tr>
+          <tr>
+            <td class="contents">ヘッダー</td>
+            <td class="number">
+              <input
+                type="number"
+                id="header"
+                value="0"
+                oninput="updateTotal('header', 4000)"
+              />
+            </td>
+            <td class="money">¥4,000</td>
+            <td id="headerTotal" class="price">¥0</td>
+          </tr>
+          <tr>
+            <td class="contents">フッター</td>
+            <td class="number">
+              <input
+                type="number"
+                id="footer"
+                value="0"
+                oninput="updateTotal('footer', 4000)"
+              />
+            </td>
+            <td class="money">¥4,000</td>
+            <td id="footerTotal" class="price">¥0</td>
+          </tr>
+          <tr>
+            <td class="contents">アニメーション（モジュール）</td>
+            <td class="number">
+              <input
+                type="number"
+                id="moduleAnimation"
+                value="0"
+                oninput="updateTotal('moduleAnimation', 3000)"
+              />
+            </td>
+            <td class="money">¥3,000</td>
+            <td id="moduleAnimationTotal" class="price">¥0</td>
+          </tr>
+          <tr>
+            <td class="contents">アニメーション（カスタマイズ）</td>
+            <td class="number">
+              <input
+                type="number"
+                id="customAnimation"
+                value="0"
+                oninput="updateTotal('customAnimation', 5000)"
+              />
+            </td>
+            <td class="money">¥5,000</td>
+            <td id="customAnimationTotal" class="price">¥0</td>
+          </tr>
+          <tr>
+            <td class="contents">その他</td>
+            <td class="number">
+              <input
+                type="number"
+                id="other"
+                value="0"
+                oninput="updateTotal('other', 0)"
+              />
+            </td>
+            <td class="money">¥0</td>
+            <td id="otherTotal" class="price">¥0</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h2>WordPress項目</h2>
+      <table id="estimateTable2">
+        <thead>
+          <tr>
+            <th class="contents">内容</th>
+            <th class="number">個数/ページ数</th>
+            <th class="money">料金</th>
+            <th class="price">金額</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="contents">WordPressの機能の拡張・変更</td>
+            <td class="number">
+              <input
+                type="number"
+                id="wpExtension"
+                value="0"
+                oninput="updateTotal('wpExtension', 8000)"
+              />
+            </td>
+            <td class="money">¥8,000</td>
+            <td id="wpExtensionTotal" class="price">¥0</td>
+          </tr>
+          <tr>
+            <td class="contents">トップページ</td>
+            <td class="number">
+              <input
+                type="number"
+                id="topPage2"
+                value="0"
+                oninput="updateTotal('topPage2', 28000)"
+              />
+            </td>
+            <td class="money">¥28,000</td>
+            <td id="topPage2Total" class="price">¥0</td>
+          </tr>
+          <tr>
+            <td class="contents">固定ページテンプレート</td>
+            <td class="number">
+              <input
+                type="number"
+                id="fixedPageTemplate"
+                value="0"
+                oninput="updateTotal('fixedPageTemplate', 4000)"
+              />
+            </td>
+            <td class="money">¥4,000</td>
+            <td id="fixedPageTemplateTotal" class="price">¥0</td>
+          </tr>
+          <tr>
+            <td class="contents">固定ページ</td>
+            <td class="number">
+              <input
+                type="number"
+                id="fixedPage"
+                value="0"
+                oninput="updateTotal('fixedPage', 5000)"
+              />
+            </td>
+            <td class="money">¥5,000</td>
+            <td id="fixedPageTotal" class="price">¥0</td>
+          </tr>
+          <tr>
+            <td class="contents">ヘッダー</td>
+            <td class="number">
+              <input
+                type="number"
+                id="header2"
+                value="0"
+                oninput="updateTotal('header2', 6000)"
+              />
+            </td>
+            <td class="money">¥6,000</td>
+            <td id="header2Total" class="price">¥0</td>
+          </tr>
+          <tr>
+            <td class="contents">フッター</td>
+            <td class="number">
+              <input
+                type="number"
+                id="footer2"
+                value="0"
+                oninput="updateTotal('footer2', 6000)"
+              />
+            </td>
+            <td class="money">¥6,000</td>
+            <td id="footer2Total" class="price">¥0</td>
+          </tr>
+          <tr>
+            <td class="contents">記事詳細ページ</td>
+            <td class="number">
+              <input
+                type="number"
+                id="articleDetail"
+                value="0"
+                oninput="updateTotal('articleDetail', 6000)"
+              />
+            </td>
+            <td class="money">¥6,000</td>
+            <td id="articleDetailTotal" class="price">¥0</td>
+          </tr>
+          <tr>
+            <td class="contents">記事一覧ページ</td>
+            <td class="number">
+              <input
+                type="number"
+                id="articleList"
+                value="0"
+                oninput="updateTotal('articleList', 8000)"
+              />
+            </td>
+            <td class="money">¥8,000</td>
+            <td id="articleListTotal" class="price">¥0</td>
+          </tr>
+          <tr>
+            <td class="contents">404ページ</td>
+            <td class="number">
+              <input
+                type="number"
+                id="page404"
+                value="0"
+                oninput="updateTotal('page404', 3000)"
+              />
+            </td>
+            <td class="money">¥3,000</td>
+            <td id="page404Total" class="price">¥0</td>
+          </tr>
+          <tr>
+            <td class="contents">カテゴリ一覧ページ</td>
+            <td class="number">
+              <input
+                type="number"
+                id="categoryList"
+                value="0"
+                oninput="updateTotal('categoryList', 6000)"
+              />
+            </td>
+            <td class="money">¥6,000</td>
+            <td id="categoryListTotal" class="price">¥0</td>
+          </tr>
+          <tr>
+            <td class="contents">カスタム投稿記事詳細ページ</td>
+            <td class="number">
+              <input
+                type="number"
+                id="customPostDetail"
+                value="0"
+                oninput="updateTotal('customPostDetail', 6000)"
+              />
+            </td>
+            <td class="money">¥6,000</td>
+            <td id="customPostDetailTotal" class="price">¥0</td>
+          </tr>
+          <tr>
+            <td class="contents">カスタム投稿記事一覧ページ</td>
+            <td class="number">
+              <input
+                type="number"
+                id="customPostList"
+                value="0"
+                oninput="updateTotal('customPostList', 8000)"
+              />
+            </td>
+            <td class="money">¥8,000</td>
+            <td id="customPostListTotal" class="price">¥0</td>
+          </tr>
+          <tr>
+            <td class="contents">カスタム投稿カテゴリー一覧ページ</td>
+            <td class="number">
+              <input
+                type="number"
+                id="customPostCategoryList"
+                value="0"
+                oninput="updateTotal('customPostCategoryList', 6000)"
+              />
+            </td>
+            <td class="money">¥6,000</td>
+            <td id="customPostCategoryListTotal" class="price">¥0</td>
+          </tr>
+          <tr>
+            <td class="contents">お問い合わせフォーム込み固定ページ</td>
+            <td class="number">
+              <input
+                type="number"
+                id="contactFormFixedPage"
+                value="0"
+                oninput="updateTotal('contactFormFixedPage', 13000)"
+              />
+            </td>
+            <td class="money">¥13,000</td>
+            <td id="contactFormFixedPageTotal" class="price">¥0</td>
+          </tr>
+          <tr>
+            <td class="contents">カスタムフィールド1項目</td>
+            <td class="number">
+              <input
+                type="number"
+                id="customField"
+                value="0"
+                oninput="updateTotal('customField', 1000)"
+              />
+            </td>
+            <td class="money">¥1,000</td>
+            <td id="customFieldTotal" class="price">¥0</td>
+          </tr>
+          <tr>
+            <td class="contents">ブロック/パターン1個</td>
+            <td class="number">
+              <input
+                type="number"
+                id="blockPattern"
+                value="0"
+                oninput="updateTotal('blockPattern', 4000)"
+              />
+            </td>
+            <td class="money">¥4,000</td>
+            <td id="blockPatternTotal" class="price">¥0</td>
+          </tr>
+          <tr>
+            <td class="contents">パンくずリスト</td>
+            <td class="number">
+              <input
+                type="number"
+                id="breadcrumb"
+                value="0"
+                oninput="updateTotal('breadcrumb', 5000)"
+              />
+            </td>
+            <td class="money">¥5,000</td>
+            <td id="breadcrumbTotal" class="price">¥0</td>
+          </tr>
+          <tr>
+            <td class="contents">テキスト・画像変更1箇所</td>
+            <td class="number">
+              <input
+                type="number"
+                id="textImageChange"
+                value="0"
+                oninput="updateTotal('textImageChange', 1000)"
+              />
+            </td>
+            <td class="money">¥1,000</td>
+            <td id="textImageChangeTotal" class="price">¥0</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <button onclick="calculateTotal()">合計金額を計算</button>
+      <div id="total">合計金額(税込): ¥0</div>
+    </div>
+    <script src="./js/script.js"></script>
+  </body>
+</html>
