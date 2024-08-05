@@ -1,0 +1,168 @@
+@charset "utf-8";
+/* ====================
+共通
+==================== */
+html{
+  font-size: 62.5%;
+}
+.sec .sec__inner,
+.footer .footer__inner{
+  width: 95%;
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 767px){
+  
+}
+
+/* ====================
+余白
+==================== */
+.pb-20{
+  padding-bottom: 20px;
+}
+
+@media screen and (max-width: 767px){
+
+}
+
+/* ====================
+テキスト調整
+==================== */
+body p{
+  line-height: 1.7;
+  font-size: 1.8rem;
+}
+.sec__text--red{
+  color: #c60056;
+  font-weight: bold;
+}
+.sec__text--solid{
+  border-bottom: 2px solid #c60056;
+}
+.sec__text--dot{
+  border-bottom: 2px dotted #c60056;
+}
+
+@media screen and (max-width: 767px) {
+  body p{
+    font-size: 1.5rem;
+  }
+}
+
+/* ====================
+吹き出し
+==================== */
+.balloon{
+  padding: 16px;
+  font-weight: bold;
+}
+/* 左向き */
+.balloon1-left {
+  position: relative;
+  display: inline-block;
+  margin: 1.5em 0 1.5em 15px;
+  min-width: 120px;
+  max-width: 100%;
+  color: #555;
+  font-size: 16px;
+  background: #e0edff;
+}
+.balloon1-left:before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: -30px;
+  margin-top: -15px;
+  border: 15px solid transparent;
+  border-right: 15px solid #e0edff;
+}
+.balloon1-left p {
+  margin: 0;
+  padding: 0;
+}
+
+/* 右向き */
+.balloon1-right {
+  position: relative;
+  display: inline-block;
+  margin: 1.5em 15px 1.5em 0;
+  min-width: 120px;
+  max-width: 100%;
+  color: #555;
+  font-size: 16px;
+  background: #e0edff;
+}
+.balloon1-right:before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 100%;
+  margin-top: -15px;
+  border: 15px solid transparent;
+  border-left: 15px solid #e0edff;
+}
+.balloon1-right p {
+  margin: 0;
+  padding: 0;
+}
+
+/* アイコンあり */
+.balloon2 {
+  width: 100%;
+  margin: 1.5em 0;
+  overflow: hidden;
+}
+.balloon2 .faceicon {
+  float: left;
+  margin-right: -90px;
+  width: 80px;
+}
+.balloon2 .faceicon img{
+  width: 100%;
+  height: auto;
+  border: solid 3px #d7ebfe;
+  border-radius: 50%;
+}
+.balloon2 .chatting {
+  width: 100%;
+}
+.says {
+  display: inline-block;
+  position: relative; 
+  margin: 5px 0 0 105px;
+  padding: 17px 13px;
+  border-radius: 12px;
+  background: #d7ebfe;
+}
+.says:after {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  top: 18px; 
+  left: -24px;
+  border: 12px solid transparent;
+  border-right: 12px solid #d7ebfe;
+}
+.says p {
+  margin: 0;
+  padding: 0;
+}
+@media screen and (max-width: 767px){
+  
+}
+
+/* ====================
+footer
+==================== */
+.footer{
+  background-color: #555;
+  padding: 16px;
+}
+.footer p{
+  color: #ffffff;
+  text-align: center;
+}
+@media screen and (max-width: 767px){
+  
+}
