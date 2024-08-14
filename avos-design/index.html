@@ -28,10 +28,13 @@
     />
     <!-- ▼CSS読み込み -->
     <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./slick/slick.css" />
+    <link rel="stylesheet" href="./slick/slick.css" />
     <link rel="stylesheet" href="./css/common.css" />
     <link rel="stylesheet" href="./css/style.css" />
     <!-- ▼script読み込み -->
     <script type="text/javascript" src="./js/jquery-3.7.1.min.js"></script>
+    <script type="text/javascript" src="./slick/slick.min.js"></script>
     <script type="text/javascript" src="./js/breadcrumb.js"></script>
     <script type="text/javascript" src="./js/script.js"></script>
   </head>
@@ -71,22 +74,28 @@
             </h2>
             <ul class="news__list">
               <li class="news__item">
-                <time class="news__item-time" datetime="">2023.10.30</time>
-                <span class="news__item-tag">track record</span>
+                <div class="news__item-label-area">
+                  <time class="news__item-time" datetime="">2023.10.30</time>
+                  <span class="news__item-tag">track record</span>
+                </div>
                 <a class="news__item-link" href=""
                   >K様の別邸を建設させていただきました。</a
                 >
               </li>
               <li class="news__item">
-                <time class="news__item-time" datetime="">2023.10.30</time>
-                <span class="news__item-tag">recruit</span>
+                <div class="news__item-label-area">
+                  <time class="news__item-time" datetime="">2023.10.28</time>
+                  <span class="news__item-tag">recruit</span>
+                </div>
                 <a class="news__item-link" href=""
                   >サイト運用担当者を1名募集します！</a
                 >
               </li>
               <li class="news__item">
-                <time class="news__item-time" datetime="">2023.10.30</time>
-                <span class="news__item-tag">NEWS</span>
+                <div class="news__item-label-area">
+                  <time class="news__item-time" datetime="">2023.10.14</time>
+                  <span class="news__item-tag">NEWS</span>
+                </div>
                 <a class="news__item-link" href=""
                   >建築物ニュースサイト「新建設」様にて取材いただきました。</a
                 >
@@ -99,23 +108,35 @@
         </div>
       </section>
 
+      <!-- polygon -->
+      <div class="polygon">
+        <div class="circle"></div>
+        <div class="square"></div>
+        <div class="triangle"></div>
+      </div>
+
       <!-- WHAT’S AVOS_DESIGN・・・? section -->
 
       <!-- SERVICE section -->
       <section id="service" class="service">
         <div class="service-slider">
           <div class="service__image">
-            <img src="./images/service01.jpg" alt="" alt="建設中の木造住宅" />
+            <img src="./images/service01.jpg" alt="建設中の木造住宅" />
           </div>
           <div class="service__image">
-            <img src="./images/service02.jpg" alt="" alt="テラスのある家" />
+            <img src="./images/service02.jpg" alt="テラスのある家" />
           </div>
           <div class="service__image">
-            <img
-              src="./images/service03.jpg"
-              alt=""
-              alt="空間を利用した建設物"
-            />
+            <img src="./images/service03.jpg" alt="空間を利用した建設物" />
+          </div>
+          <div class="service__image">
+            <img src="./images/service04.jpg" alt="空間を利用した建設物" />
+          </div>
+          <div class="service__image">
+            <img src="./images/service05.jpg" alt="空間を利用した建設物" />
+          </div>
+          <div class="service__image">
+            <img src="./images/service06.jpg" alt="空間を利用した建設物" />
           </div>
         </div>
         <div class="btn-area btn--center">

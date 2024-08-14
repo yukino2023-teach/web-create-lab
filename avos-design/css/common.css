@@ -133,9 +133,6 @@ body {
 /* header */
 /* ========================== */
 .header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   position: absolute;
   top: 0;
   left: 50%;
@@ -143,9 +140,27 @@ body {
   transform: translateX(-50%);
   margin-bottom: 0;
   padding: 16px 0;
+  transition: .3s;
+  width: 100%;
+}
+.header .wrapper{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  margin-bottom: 0;
+}
+.header.is-active{
+  position: fixed;
+  width: 100%;
+  background-color: #E3D79C;
+  opacity: 0.9;
 }
 .header-nav__text--green {
   color: var(--font-green);
+}
+.header.is-active .header-nav__text--green{
+  color: #6c8a22;
 }
 .header .header-nav .header-nav__list {
   display: flex;
