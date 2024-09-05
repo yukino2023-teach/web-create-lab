@@ -334,3 +334,60 @@
 @media screen and (max-width: 768px) {
 }
 
+
+
+/* service-pages */
+/* ========================== */
+.service__list{
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 64px;
+  justify-content: space-between;
+}
+.service__item{
+  width: calc(350 / 1100 * 100%);
+  border-top-right-radius: 20%;
+}
+.service__img{
+  margin-bottom: 24px;
+}
+.service__img img{
+  border-top-right-radius: 50px;
+  border-bottom-left-radius: 50px;
+}
+.service-area .heading__h3{
+  font-size: 2.2rem;
+  font-weight: bold;
+  position: relative;
+  padding-left: 27px;
+  margin-bottom: 16px;
+  color: #705d00;
+}
+.service-area .heading__h3::before{
+  position: absolute;
+  content: "";
+  width: 20px;
+  height: 20px;
+  background-color: #c0e85d;
+  border: 1px solid #705d00;
+  border-radius: 50%;
+  left: 0;
+  top: 0;
+}
+.service-area .heading__h3::after{
+  position: absolute;
+  content: "";
+  width: 12px;
+  height: 12px;
+  background-color: #705d00;
+  border-radius: 50%;
+  left: 4px;
+  top: 4px;
+}
+.service__text{
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: #705d00;
+  line-height: 1.625;
+  letter-spacing: 0.1em;
+}
