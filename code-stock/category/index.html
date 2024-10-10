@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>カテゴリー分け</title>
+    <!-- ▼CSS読み込み▼ -->
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <!-- ▼script読み込み▼ -->
+    <script
+      type="text/javascript"
+      src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+    ></script>
+    <script src="./js/script.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="heading__h1">カテゴリー分け</h1>
+      <div class="codePen">
+        <p class="codepen" data-height="500" data-default-tab="html,result" data-slug-hash="yLdoMyQ" data-pen-title="Untitled" data-user="ybjsvwly-the-lessful" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+          <span>See the Pen <a href="https://codepen.io/ybjsvwly-the-lessful/pen/yLdoMyQ">
+          Untitled</a> by ユキノプログラミング (<a href="https://codepen.io/ybjsvwly-the-lessful">@ybjsvwly-the-lessful</a>)
+          on <a href="https://codepen.io">CodePen</a>.</span>
+        </p>
+        <script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
+      </div>
+      <div class="explanation">
+        <h2 class="heading__h2">HTMLについて</h2>
+        <div class="explanation__html">
+          <div>
+            <h3 class="heading__h3">カテゴリー種別</h3>
+            <p>コード内でどういうカテゴリー名で扱っていくかを決めて、それぞれに<span class="explanation__text--green">「data-category」</span>属性をつける。</p>
+            <div class="explanation__img"><img src="./img/html01.png" alt=""></div>
+          </div>
+          <div>
+            <h3 class="heading__h3">カテゴリーの中身の設定</h3>
+            <p>
+              実際にカテゴリー分類させたいアイテムたちを入力する。<br>
+              それぞれ分類させたいカテゴリーに合うように「カテゴリー種別」パートで設定した<span class="explanation__text--green">「data-category」</span>属性と一致するように個別で付けていく。
+            </p>
+            <div class="explanation__img"><img src="./img/html02.png" alt=""></div>
+          </div>
+        </div>
+      </div>
+      <div class="explanation">
+        <h2 class="heading__h2">CSSについて</h2>
+        <div class="explanation__css">
+          <div>
+            <h3 class="heading__h3">レイアウト調整</h3>
+            <p>好きなようにレイアウト組んでみてください。<br>
+            基本、横並び(flex)もしくはグリット(grid)で実装してもらえれば綺麗にいくとおもいます。</p>
+            <div class="explanation__img"><img src="" alt=""></div>
+          </div>
+          <div>
+            <h3 class="heading__h3">JSによる新class名付与時の動き</h3>
+            <p>itemを表示する際に、JSでclass名を付与したり外したりすることで画面を切り替えます。<br>
+              その際に付与されるclass名がついたときに表示させて、別カテゴリーが押されたタイミングで元々ついていたclass名が移動して・・・<br>
+              みたいな動きが入るためそれの時用の実装が必要になるります。
+            </p>
+            <div class="explanation__img"><img src="./img/css01.png" alt=""></div>
+          </div>
+        </div>
+      </div>
+      <div class="explanation">
+        <h2 class="heading__h2">JavaScriptについて</h2>
+        <div class="explanation__js">
+          <div>
+            <h3 class="heading__h3">カテゴリー分けの詳細</h3>
+            <p>
+              <ol>
+                <li>カテゴリーの種類と設置箇所を認識する。</li>
+                <li>各カテゴリーがクリックされたときに<span class="explanation__text--green">「data-category」</span>の種別を認識させる。</li>
+                <li>それと同時にshowというクラス名を付与する。（show付与時の表示設定はCSSで行う）</li>
+                <li>少しフワッと表示させるための設定を入れる。</li>
+            </ol></p>
+            <div class="explanation__img"><img src="./img/js01.png" alt=""></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
