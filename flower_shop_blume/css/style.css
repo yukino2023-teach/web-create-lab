@@ -26,12 +26,47 @@ body {
   border: 2px solid #ffffff;
   border-radius: 50px;
   margin: 0 auto;
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+}
+.btn::after{
+  background: #ffffff;
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: '';
+  width: 100%;
+  height: 100%;
+  transform: scale(0, 1);
+  transform-origin: left top;
+  transition: .5s cubic-bezier(0.45, 0, 0.55, 1);
+  z-index: -1;
+}
+.btn:hover{
+  color: #050507;
+}
+.btn:hover::after{
+  transform: scale(1, 1);
+}
+.sp-only{
+  display: none;
 }
 
 /* parts */
 /* ========================== */
-@media screen and (max-width:768px) {
-  
+@media screen and (max-width:767px) {
+  .sp-only{
+    display: block;
+  }
+  .pc-only{
+    display: none;
+  }
+  .btn{
+    max-width: 260px;
+    height: 42px;
+    line-height: 42px;
+  }
 }
 
 /* heading */
@@ -53,7 +88,7 @@ body {
 .heading__h3{
   font-size: 2rem;
 }
-@media screen and (max-width:768px) {
+@media screen and (max-width:767px) {
 }
 
 /* header */
@@ -76,6 +111,19 @@ body {
   font-size: 2rem;
 }
 @media screen and (max-width:767px) {
+  .logo{
+    width: 87px;
+  }
+  .header__list{
+    flex-wrap: wrap;
+    row-gap: 22px;
+    margin-bottom: 32px;
+  }
+  .header__item{
+    width: 50%;
+    text-align: center;
+    font-size: 1.4rem;
+  }
 }
 
 /* main-area */
@@ -85,13 +133,19 @@ body {
   justify-content: center;
   overflow-x: hidden;
   margin-bottom: 75px;
+  flex-wrap: nowrap;
 }
 .kv__item{
   min-width: 320px;
   width: 100%;
 }
-@media screen and (max-width:768px) {
-
+@media screen and (max-width:767px) {
+  .kv__list{
+    margin-bottom: 32px;
+  }
+  .kv__item{
+    min-width: auto;
+  }
 }
 
 /* concept */
@@ -120,13 +174,36 @@ body {
 .concept-img__item{
   width: calc((225 / 1080) * 100%);
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
+  .concept{
+    background-size: 139px, cover;
+    background-position: right -17px bottom -5px, center;
+  }
+  .concept__inner{
+    padding: 42px 16px 130px;
+  }
+  .concept-img__list{
+    flex-wrap: wrap;
+    max-width: 224px;
+    margin: 0 auto;
+    gap: 24px;
+  }
+  .concept-img__item{
+    width: 100px;
+  }
+  .concept__text{
+    line-height: 1.71;
+    margin-bottom: 32px;
+  }
+  .concept .header__h2-lead{
+    font-size: 2.4rem;
+  }
 }
 
 /* bouquet */
 /* ========================== */
 .bouquet{
-  padding: 92px;
+  padding: 92px 0;
   color: #ffffff;
 }
 .bouquet__inner{
@@ -180,7 +257,35 @@ body {
   border-color: #050507;
   background-color: #050507;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
+  .bouquet__item{
+    flex-direction: column;
+  }
+  .bouquet__img,
+  .bouquet__text-area{
+    width: 100%;
+  }
+  .bouquet__img{
+    margin-bottom: 22px;
+  }
+  .bouquet__text-area{
+    padding: 0 16px;
+  }
+  .bouquet-sns__container{
+    flex-direction: column;
+    padding: 59px 16px;
+    margin: 0 16px;
+  }
+  .bouquet-sns__text,
+  .bouquet-sns-btn-area{
+    width: 100%;
+  }
+  .bouquet-sns__text{
+    margin-bottom: 28px;
+  }
+  .bouquet-sns-btn-area{
+    padding: 0;
+  }
 }
 
 /* direct-shop */
@@ -208,8 +313,20 @@ body {
 }
 .direct-shop-btn{
   background-color: #222222;
+  border: 1px solid #222222;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
+  .direct-shop__inner{
+    padding: 0 16px;
+  }
+  .direct-shop__list{
+    overflow-x: scroll;
+    overflow-y: hidden;
+    gap: 24px;
+  }
+  .direct-shop__item{
+    min-width: 260px;
+  }
 }
 
 /* online-shop */
@@ -224,7 +341,7 @@ body {
   font-size: 3.2rem;
   color: #ffffff;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
 }
 
 /* sns-info */
@@ -245,7 +362,11 @@ body {
   gap: 24px;
   justify-content: center;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
+  .sns__list{
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
 /* map */
@@ -255,7 +376,10 @@ body {
   height: 365px;
   filter: grayscale(100%) invert(92%) contrast(83%);
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
+  .map iframe{
+    height: 277px;
+  }
 }
 
 /* footer */
@@ -267,5 +391,5 @@ body {
   text-align: center;
   padding: 24px 0;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
 }
